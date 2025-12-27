@@ -1,7 +1,8 @@
 # System packages which includes options for virtualization support
 # Generally, stuff that the root user can use are installed here
-{pkgs, ...}:
+{ pkgs, ... }:
 {
+  # actually exists as a home-manager module
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
   virtualisation.docker.rootless = {
@@ -14,6 +15,7 @@
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.guest.enable = true;
 
+  # TODO,
   environment.systemPackages = with pkgs; [
     vim
   ];

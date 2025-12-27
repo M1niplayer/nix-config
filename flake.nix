@@ -13,27 +13,30 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      loudness = nixpkgs.lib.nixosSystem {
-        modules = [
-          # user-made modules här. 
-          ./loudness
+  outputs =
+    inputs@{ nixpkgs, home-manager, ... }:
+    {
+      nixosConfigurations = {
+        loudness = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./loudness
 
-          ./modules/i18n.nix
-          ./modules/kdeplasma.nix
-          ./modules/nix.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            ./modules/i18n.nix
+            ./modules/kdeplasma.nix
+            ./modules/nix.nix
 
-            home-manager.users.chaj = import ./home/home.nix;
+            ./modules/codium.nix # mhmm editor
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-          }
-        ];
+              home-manager.users.chaj = import ./home/home.nix;
+
+              # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            }
+          ];
+        };
       };
     };
-  };
 }

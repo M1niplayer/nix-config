@@ -19,7 +19,7 @@
   #     xxx
   # '';
 
-    #TODO wtf
+  #TODO wtf
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -33,15 +33,6 @@
     # zoom-us
     # xdg-desktop-portal
     obsidian
-
-    # #kdePackages.kdenlive
-    # krita
-
-    # #el ctf. Bör rimligen gå till olika shells
-    # ghidra-bin
-    # ghidra-extensions.ghidra-golanganalyzerextension
-    # qemu-user
-    # wireshark
 
     # archives
     zip
@@ -70,12 +61,14 @@
     tree
 
     # nix related
-    #
+
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-index
     nix-output-monitor
-    diff-so-fancy #used in bash aliases
+    nixfmt
+
+    diff-so-fancy # used in bash aliases
 
     ffmpeg_6-full
 
@@ -99,8 +92,8 @@
   programs.git = {
     enable = true;
     settings.user = {
-        name = "chaj";
-        email = "chaithetea@proton.me";
+      name = "chaj";
+      email = "chaithetea@proton.me";
     };
   };
   #yes these exists
@@ -114,40 +107,40 @@
     enableCompletion = true;
 
     shellAliases = rec {
-        shellsPath = "~/eposr/shells";
-        blash = "nix-shell ";
+      shellsPath = "~/eposr/shells";
+      blash = "nix-shell ";
 
-        gosh = blash + shellsPath + "/golang.nix";
-        zigsh = blash + shellsPath + "/zigsh.nix";
-        jash = blash + shellsPath + "/jash.nix";
+      gosh = blash + shellsPath + "/golang.nix";
+      zigsh = blash + shellsPath + "/zigsh.nix";
+      jash = blash + shellsPath + "/jash.nix";
 
-        nodesh = blash + shellsPath + "/nodejs.nix";
+      nodesh = blash + shellsPath + "/nodejs.nix";
 
-        pyvenvsh = blash + shellsPath + "/pyvenv.nix";
-        pysh = blash + shellsPath + "/py.nix";
-        pyfhssh = blash + shellsPath + "/pyfsh.nix";
+      pyvenvsh = blash + shellsPath + "/pyvenv.nix";
+      pysh = blash + shellsPath + "/py.nix";
+      pyfhssh = blash + shellsPath + "/pyfsh.nix";
 
-        bqnsh = blash + shellsPath + "/bqn.nix";
-        uash = blash + shellsPath + "/uiua.nix";
+      bqnsh = blash + shellsPath + "/bqn.nix";
+      uash = blash + shellsPath + "/uiua.nix";
 
-        ctfsh = blash + shellsPath + "/ctf.nix";
-        vpnsh = blash + shellsPath + "/vpn.nix"; #one day
+      ctfsh = blash + shellsPath + "/ctf.nix";
+      vpnsh = blash + shellsPath + "/vpn.nix"; # one day
 
-        #already use lazygit for git add --patch
-        gb = "git branch ";
-        gs = "git status ";
-        gco = "git checkout ";
-        gd = "git diff --output-indicator-new=' ' --output-indicator-old=' '";
-        gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto)  %D%n%s%n'";
+      #already use lazygit for git add --patch
+      gb = "git branch ";
+      gs = "git status ";
+      gco = "git checkout ";
+      gd = "git diff --output-indicator-new=' ' --output-indicator-old=' '";
+      gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto)  %D%n%s%n'";
 
-        nyancat = "bat";
+      nyancat = "bat";
 
-        o = "xdg-open";
+      o = "xdg-open";
 
-        z = "lazygit";
+      z = "lazygit";
 
-        dc = "cd ~ && cd \"$(find * -type d | fzf)\"";
-        dcd = "cd $(find * -type d | fzf)";
+      dc = "cd ~ && cd \"$(find * -type d | fzf)\"";
+      dcd = "cd $(find * -type d | fzf)";
     };
   };
 

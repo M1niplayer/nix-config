@@ -1,19 +1,26 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./packages.nix
-      # to avoid problems caused by different versions of nixpkgs.
-      #inputs.nixpkgs.follows = "nixpkgs";
-      ./peripherals.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    # to avoid problems caused by different versions of nixpkgs.
+    #inputs.nixpkgs.follows = "nixpkgs";
+    ./peripherals.nix
+  ];
   networking.hostName = "loudness";
-  
+
   users.users.chaj = {
     isNormalUser = true;
     description = "tea";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   networking.networkmanager.enable = true;
