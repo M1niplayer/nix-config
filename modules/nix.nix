@@ -22,7 +22,7 @@
   nix.gc = {
     automatic = lib.mkDefault true;
     dates = lib.mkDefault "weekly";
-    options = lib.mkDefault "--delete-older-than 7d";
+    options = lib.mkDefault "--delete-older-than 30d";
   };
 
   # Manual optimise storage: nix-store --optimise
