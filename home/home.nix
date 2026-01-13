@@ -30,8 +30,8 @@
     kdePackages.kate
     discord
 
-    # zoom-us
-    # xdg-desktop-portal
+    zoom-us
+    xdg-desktop-portal
     obsidian
 
     # archives
