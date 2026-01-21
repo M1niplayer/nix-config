@@ -3,7 +3,7 @@
   services.xserver.enable = true;
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "se";
+    layout = "se, bqn";
     variant = "";
     options = "grp:lctrl_lwin_toggle";
   };
@@ -14,6 +14,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  
   # Configure console keymap
   console.keyMap = "sv-latin1";
 }
