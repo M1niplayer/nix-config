@@ -86,6 +86,10 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    #
+    nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-serif
   ];
 
   # basic configuration of git, please change to your own
@@ -133,8 +137,8 @@
       gd = "git diff --output-indicator-new=' ' --output-indicator-old=' '";
       gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto)  %D%n%s%n'";
 
-      nyancat = "bat";
-
+      nyancat = "bat --paging=never";
+      ls = "eza --icons --color=auto";
       o = "xdg-open";
 
       z = "lazygit";
