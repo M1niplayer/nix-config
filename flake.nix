@@ -44,7 +44,7 @@
         };
         loudness = nixpkgs.lib.nixosSystem {
           modules = [
-            ./loudness
+            ./hosts/loudness
 
             ./modules/i18n.nix
             ./modules/kdeplasma.nix
@@ -57,7 +57,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
 
-              home-manager.users.chaj = import ./home/home.nix;
+              home-manager.users.chaj = import ./home/.nix;
 
               # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             }
