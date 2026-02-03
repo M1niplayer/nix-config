@@ -1,11 +1,10 @@
 #let
 #   codium-keybindings = ./keybindings.json # path
 #in
-{ zed, system, ... }:
+{ system, ... }:
 {
     programs.zed-editor = {
         enable = true;
-        package = zed.packages.${system}.default;
         extensions = [ "nix" "toml" "rust" ];
         userSettings = {
             enabled = true;
@@ -27,7 +26,8 @@
         };
         hour_format = "hour24";
         vim_mode = true;
-
+        base_keymap = "VSCode";
+        #installRemoteServer = true;
     };
   };
 }

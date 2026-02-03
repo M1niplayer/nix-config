@@ -1,4 +1,4 @@
-{ config, pkgs, zed, system, ... }:
+{ config, pkgs, system, ... }:
 
 {
   imports = [

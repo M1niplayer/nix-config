@@ -11,14 +11,10 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
     };
-    zed = {
-      url = "github:zed-industries/zed";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, zed, ... }:
+    inputs@{ nixpkgs, home-manager, ... }:
     let 
       system = "x86_64-linux"; #fix when adding steam deck
 
@@ -65,9 +61,6 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               #should import gui packages
-              home-manager.extraSpecialArgs = {
-                inherit zed system;
-              };
               home-manager.users.chaj = import ./home/home.nix;
 
               # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
