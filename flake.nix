@@ -11,37 +11,45 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
     };
+    zed = {
+      url = "github:zed-industries/zed";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ nixpkgs, home-manager, ... }:
+    inputs@{ nixpkgs, home-manager, zed, ... }:
+    let 
+      system = "x86_64-linux"; #fix when adding steam deck
+
+      pkgs = import nixpkgs { inherit system; };
+    in
     {
       nixosConfigurations = {
-        #windows wsl
-        #anmitsu
-        
-        #home server
-        delay = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./loudness
+        #windows wsl - zure
+        #steam deck - anmitsu 
+        #home server - muriscratch
+        # delay = nixpkgs.lib.nixosSystem {
+        #   modules = [
+        #     ./loudness
 
-            ./modules/i18n.nix
-            ./modules/kdeplasma.nix
-            ./modules/nix.nix
-            ./modules/flatpak.nix
+        #     ./modules/i18n.nix
+        #     ./modules/kdeplasma.nix
+        #     ./modules/nix.nix
+        #     ./modules/flatpak.nix
 
-            ./modules/codium.nix # mhmm editor
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+        #     ./modules/codium.nix # mhmm editor
+        #     home-manager.nixosModules.home-manager
+        #     {
+        #       home-manager.useGlobalPkgs = true;
+        #       home-manager.useUserPackages = true;
 
-              home-manager.users.chaj = import ./home/home.nix;
+        #       home-manager.users.chaj = import ./home/home.nix;
 
-              # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-            }
-          ];
-        };
+        #       # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+        #     }
+        #   ];
+        # };
         loudness = nixpkgs.lib.nixosSystem {
           modules = [
             ./hosts/loudness
@@ -56,8 +64,11 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-
-              home-manager.users.chaj = import ./home/.nix;
+              #should import gui packages
+              home-manager.extraSpecialArgs = {
+                inherit zed system;
+              };
+              home-manager.users.chaj = import ./home/home.nix;
 
               # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             }

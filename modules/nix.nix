@@ -30,5 +30,5 @@
   nix.settings.auto-optimise-store = true;
 
   nix.channel.enable = false; # remove nix-channel related tools & configs, we use flakes instead.
-
+  #set nix_path to like i dunno nothing
 }

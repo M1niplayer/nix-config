@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, zed, system, ... }:
 
 {
+  imports = [
+    ../modules/home/zed.nix
+  ];
   home.username = "chaj";
   home.homeDirectory = "/home/chaj";
 
