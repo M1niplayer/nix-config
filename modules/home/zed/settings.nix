@@ -1,12 +1,5 @@
 {
-    assistant = {
-        enabled = false;
-        # version = "2";
-        # default_model = {
-            # provider = "copilot_chat";
-            # model = "gpt-3.5-turbo";
-        # };
-    };
+    disable_ai = true;
 
     theme = {
         mode = "system";
