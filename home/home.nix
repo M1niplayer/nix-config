@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ../modules/home/zed.nix
+    ../modules/home/zed/zed.nix
+    ../modules/home/lsp/lsp.nix #im lazy
   ];
   home.username = "chaj";
   home.homeDirectory = "/home/chaj";

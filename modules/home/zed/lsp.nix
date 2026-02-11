@@ -12,8 +12,4 @@
       };
     };
   };
-  metals = {
-    binary.path_lookup = true;
-  };
-  
 }
