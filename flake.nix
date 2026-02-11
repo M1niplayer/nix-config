@@ -15,7 +15,7 @@
 
   outputs =
     inputs@{ nixpkgs, home-manager, ... }:
-    let 
+    let
       system = "x86_64-linux"; #fix when adding steam deck
 
       pkgs = import nixpkgs { inherit system; };
@@ -23,7 +23,7 @@
     {
       nixosConfigurations = {
         #windows wsl - zure
-        #steam deck - anmitsu 
+        #steam deck - anmitsu
         #home server - muriscratch
         # delay = nixpkgs.lib.nixosSystem {
         #   modules = [
@@ -53,7 +53,7 @@
             ./modules/i18n.nix
             ./modules/kdeplasma.nix
             ./modules/nix.nix
-            ./modules/flatpak.nix
+            ./modules/k8s.nix
 
             ./modules/codium.nix # mhmm editor
             home-manager.nixosModules.home-manager
