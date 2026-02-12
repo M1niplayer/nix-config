@@ -7,6 +7,7 @@
     "java"
     "html"
     "typst"
+    "elixir"
 
     "uiua"
 

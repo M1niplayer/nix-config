@@ -92,7 +92,7 @@
   programs.lazygit.enable = true;
 
   programs.firefox.enable = true;
-
+  programs.fish.enable = true;
   programs.bash = {
     enable = true;
     enableCompletion = true;
