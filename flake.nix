@@ -53,7 +53,7 @@
             ./modules/i18n.nix
             ./modules/kdeplasma.nix
             ./modules/nix.nix
-            ./modules/k8s.nix
+            # ./modules/k8s.nix
 
             ./modules/codium.nix # mhmm editor
             home-manager.nixosModules.home-manager
