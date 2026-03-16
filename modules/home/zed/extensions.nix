@@ -9,7 +9,7 @@
     "typst"
     "elixir"
 
-    "uiua"
+    "uiua" #the color highlighting doesn't separate glyphs on aridity and type which is disappointing
 
     #build tools
     "dockerfile"

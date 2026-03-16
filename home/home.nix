@@ -92,7 +92,20 @@
   programs.lazygit.enable = true;
 
   programs.firefox.enable = true;
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    shellAliases = {
+      nyancat = "bat --paging=never -p"; #these are reused but ideally I just exclusively use fish
+      ls = "eza --icons --color=auto";
+      o = "xdg-open";
+
+      z = "lazygit";
+
+      dc = "cd ~ && cd \"$(find * -type d | fzf)\"";
+      dcd = "cd $(find * -type d | fzf)";
+    };
+  };
+  
   programs.bash = {
     enable = true;
     enableCompletion = true;

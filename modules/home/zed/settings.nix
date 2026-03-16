@@ -1,9 +1,9 @@
 {
-    disable_ai = true;
+    disable_ai = true;  
 
     theme = {
         mode = "system";
-        dark = "One Dark";
+        dark = "Catppuccin Mocha";
         light = "One Light";
     };
 
@@ -11,6 +11,5 @@
     auto_update = false;
     vim_mode = false;
     base_keymap = "VSCode";
-
 
 }

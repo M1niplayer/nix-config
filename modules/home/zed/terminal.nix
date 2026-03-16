@@ -9,6 +9,9 @@
       activate_script = "default";
     };
   };
+  shell = {
+    program = "fish";
+  };
 #   env = { 
     # TERM = "ghostty"; #default bash
 #   };
