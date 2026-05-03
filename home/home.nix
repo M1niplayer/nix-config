@@ -96,7 +96,6 @@
     enable = true;
     shellAliases = {
       nyancat = "bat --paging=never -p"; #these are reused but ideally I just exclusively use fish
-      ls = "eza --icons --color=auto";
       o = "xdg-open";
 
       z = "lazygit";
