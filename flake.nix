@@ -34,6 +34,7 @@
             # already exist on the windows machine
           ];
         };
+
         loudness = nixpkgs.lib.nixosSystem {
           modules = [
             ./hosts/loudness

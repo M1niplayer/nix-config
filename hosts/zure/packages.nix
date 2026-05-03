@@ -18,7 +18,7 @@
     vim
   ];
 
-
+  progams = {
     nix-ld = {
       enable = true;
       libraries = with pkgs; [
