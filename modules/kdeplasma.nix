@@ -14,7 +14,6 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
-  
   # Configure console keymap
   console.keyMap = "sv-latin1";
 }
