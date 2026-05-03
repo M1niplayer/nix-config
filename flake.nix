@@ -22,30 +22,18 @@
     in
     {
       nixosConfigurations = {
-        #windows wsl - zure
-        #steam deck - anmitsu
-        #home server - muriscratch
-        # delay = nixpkgs.lib.nixosSystem {
-        #   modules = [
-        #     ./loudness
+        #TODO, don't clutter main flake
+        zure = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./zure
 
-        #     ./modules/i18n.nix
-        #     ./modules/kdeplasma.nix
-        #     ./modules/nix.nix
-        #     ./modules/flatpak.nix
+            ./modules/i18n.nix
+            ./modules/nix.nix
 
-        #     ./modules/codium.nix # mhmm editor
-        #     home-manager.nixosModules.home-manager
-        #     {
-        #       home-manager.useGlobalPkgs = true;
-        #       home-manager.useUserPackages = true;
-
-        #       home-manager.users.chaj = import ./home/home.nix;
-
-        #       # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-        #     }
-        #   ];
-        # };
+            # no home-manager since it contains gui apps that 
+            # already exist on the windows machine
+          ];
+        };
         loudness = nixpkgs.lib.nixosSystem {
           modules = [
             ./hosts/loudness

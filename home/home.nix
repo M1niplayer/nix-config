@@ -4,7 +4,9 @@
   imports = [
     ../modules/home/zed/zed.nix
     ../modules/home/lsp/lsp.nix #im lazy
-    ../modules/home/firefox.nix
+    ../modules/home/firefox.nix 
+    #this will grab firefox 
+    #to my wsl... TODO? 
   ];
   home.username = "chaj";
   home.homeDirectory = "/home/chaj";
