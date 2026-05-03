@@ -25,7 +25,7 @@
         #TODO, don't clutter main flake
         zure = nixpkgs.lib.nixosSystem {
           modules = [
-            ./zure
+            ./hosts/zure
 
             ./modules/i18n.nix
             ./modules/nix.nix
