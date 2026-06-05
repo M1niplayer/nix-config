@@ -93,7 +93,7 @@
   programs.btop.enable = true;
   programs.lazygit.enable = true;
 
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -139,7 +139,7 @@
       gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an %ar%C(auto)  %D%n%s%n'";
 
       nyancat = "bat --paging=never -p";
-      ls = "eza --icons --color=auto";
+      # ls = "eza --icons --color=auto";
       o = "xdg-open";
 
       z = "lazygit";

@@ -2,9 +2,9 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with
@@ -23,17 +23,17 @@
     {
       nixosConfigurations = {
         #TODO, don't clutter main flake
-        zure = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./hosts/zure
+        # zure = nixpkgs.lib.nixosSystem {
+          # modules = [
+            # ./hosts/zure
 
-            ./modules/i18n.nix
-            ./modules/nix.nix
+            # ./modules/i18n.nix
+            # ./modules/nix.nix
 
             # no home-manager since it contains gui apps that 
             # already exist on the windows machine
-          ];
-        };
+          # ];
+        # };
 
         loudness = nixpkgs.lib.nixosSystem {
           modules = [
