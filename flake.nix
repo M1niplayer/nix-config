@@ -42,6 +42,7 @@
             ./modules/i18n.nix
             ./modules/kdeplasma.nix
             ./modules/nix.nix
+            ./modules/yubikey.nix
             # ./modules/k8s.nix
 
             ./modules/codium.nix # mhmm editor

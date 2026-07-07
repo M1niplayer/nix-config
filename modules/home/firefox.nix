@@ -33,7 +33,7 @@ in
   programs.firefox = {
     enable = true;
     package = pkgs.firefox;
-    configPath = "~/config/mozilla/firefox";
+    configPath = "/home/chaj/config/mozilla/firefox";
     profiles = {
       default = {
         id = 0;
