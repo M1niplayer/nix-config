@@ -14,12 +14,14 @@
   ];
   networking.hostName = "loudness";
 
+  users.groups.plugdev = {};
   users.users.chaj = {
     isNormalUser = true;
     description = "tea";
     extraGroups = [
       "networkmanager"
       "wheel"
+      "plugdev"
     ];
   };
 

@@ -18,7 +18,10 @@
   environment.systemPackages = with pkgs; [
     vim
   ];
-
+  services.udev.packages = with pkgs; [
+    openocd
+    picotool
+  ];
   # Home manager uses lutris, TODO, check it out
   programs = {
     steam = {
