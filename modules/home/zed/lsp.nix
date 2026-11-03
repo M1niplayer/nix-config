@@ -1,5 +1,5 @@
 {
-  ocamllsp = {
-    binary.path_lookup = true;
-  };
+  # ocamllsp = {
+  #   binary.path_lookup = true;
+  # };
 }

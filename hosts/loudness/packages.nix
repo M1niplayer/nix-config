@@ -31,6 +31,11 @@
       localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
     };
 
+    kdeconnect = {
+      enable = true;
+      package = pkgs.valent;
+    };
+
     nix-ld = {
       enable = true;
       libraries = with pkgs; [
